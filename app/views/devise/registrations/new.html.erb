@@ -5,11 +5,11 @@
 
         <%# 「モデル名」にはUserモデルであれば@userを渡しましょう。%>
         <%# 「新規登録機能へのパス」は、devise導入後にrails routesを実行してdevise/registrations#createへのパスを確認し、記載してください。 %>
-        <%= form_with model: @user, url: new_user_registration, local: true do |f| %>
+        <%= form_with model: @user, url: user_registration_path, local: true do |f| %>
 
         <div class="field">
           <%= f.label :email, "メールアドレス" %><br />
-          <%= f.email_field :name, id:"user_email", autofocus: true, autocomplete: "email" %>
+          <%= f.email_field :email, id:"user_email", autofocus: true, autocomplete: "email" %>
         </div>
 
         <div class="field">
@@ -23,8 +23,8 @@
         </div>
 
         <div class="field">
-          <%= f.label :user, "ユーザー名" %><br />
-          <%= f.text_field :user, id:"user_name" %>
+          <%= f.label :name, "ユーザー名" %><br />
+          <%= f.text_field :name, id:"user_name" %>
         </div>
 
         <div class="field">
