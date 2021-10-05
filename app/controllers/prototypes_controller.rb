@@ -1,7 +1,15 @@
 class PrototypesController < ApplicationController
 
-def index
+  def index
 
-end
+  end
+
+  def new
+
+  end
+
+  def create
+
+  end
 
 end
